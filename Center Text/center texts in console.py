@@ -34,7 +34,7 @@ def center_expression(*args, sep=" "):
 
         for item in exp_list:
             space_no = (85 - len(item)) // 2
-            print(" " * space_no, item)
+            print(" " * space_no + item, end="\n")
             pass
 
         pass
@@ -73,7 +73,7 @@ def split_by_n(exp, limit=80):
 
 
 expression = input("Please enter a valid expression so I'll center it and print it for you(note: type '\"' to end the "
-                   "expression): \n\"")
+                   "expression): \n\"") + "\n"
 
 while expression[len(expression) - 2] != '"':
     expression += input() + "\n"
