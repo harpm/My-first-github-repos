@@ -72,12 +72,18 @@ def split_by_n(exp, limit=80):
     return returning_text
 
 
-expression = input("Please enter a valid expression so I'll center it and print it for you(note: type '\"' to end the "
-                   "expression): \n\"") + "\n"
+def start():
+    expression = input("Please enter a valid expression so "
+                       "I'll center it and print it for you(note: type '\"' to end the "
+                       "expression): \n\"") + "\n"
 
-while expression[len(expression) - 2] != '"':
-    expression += input() + "\n"
+    while expression[len(expression) - 2] != '"':
+        expression += input() + "\n"
 
-print("\nThe Result is: \n")
-expression = expression[0:-2:1]
-center_expression(expression)
+    print("\nThe Result is: \n")
+    expression = expression[0:-2:1]
+    center_expression(expression)
+
+
+if __name__ == '__main__':
+    start()
